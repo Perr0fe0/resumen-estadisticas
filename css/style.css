@@ -35,6 +35,7 @@ body{
     height: 100vh;
     font-size: 1.5rem;
 } 
+
 h1,h2{
     
     text-align: center;
@@ -46,12 +47,25 @@ p{
     font-family: var(--lexend-deca);
     
 }
+@media (min-width: 758px) {
+    h1,h2,p{
+        text-align: start;
+    }
+}
 img{
     width: 100%;
     filter: contrast(150%);
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     
+}
+@media (min-width: 758px) {
+    img{
+        width: 100%;
+        height: 100%;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 1rem;
+    }
 }
 /*Contenedor / container*/
 .contenedor{
@@ -61,22 +75,65 @@ img{
     border-radius: 1rem;
 
     display:grid;
-    grid-template-rows: auto; 
     
+    
+}
+@media (min-width: 758px) {
+    .contenedor{
+        width: 100rem;
+        height: 40rem;
+        grid-template-columns: 50% 50%;
+        padding: 0;
+        
+    }
+    .contenedor-info{
+        display: flex;
+        justify-content: center;
+        gap: 4rem;
+        margin-bottom: 4rem;
+        margin-left: 5rem;
+    }
+    @media (min-width: 758px) {
+        .contenedor-info{
+            justify-content: start;
+        }
+    }
+
 }
 .descripcion-titulo{
     margin: 2rem 5rem 0 5rem;
+}
+@media (min-width: 758px) {
+    .descripcion-titulo{
+       text-align: start;
+        margin-bottom: 4rem;
+        font-size: 3rem;
+    }
 }
 .descripcion-parrafo{
     margin: 2rem 3rem;
     color: var(--neutral-st-white-0-75);
 }
+@media (min-width: 758px) {
+    .descripcion-parrafo{
+        text-align:start;
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+}
 .contenedor-descripcion{
     grid-row: 2 / 3;
 }
+
 .contenedor-imagen{
     position: relative;
     
+}
+@media (min-width: 758px) {
+    .contenedor-imagen{
+        grid-row: 1 / 3;
+        grid-column: 2 / 3;
+    }
 }
 .imagen-color{
     position: absolute;
@@ -91,6 +148,12 @@ img{
     border-top-right-radius: 1rem;
     
 }
+@media (min-width: 758px) {
+    .imagen-color{
+        border-bottom-right-radius: 1rem;
+        border-top-left-radius: 0rem;
+    }
+}
 .descripcion-info{
     font-family: var(--lexend-deca);
     text-transform: uppercase;
@@ -98,13 +161,25 @@ img{
     color: var(--neutral-st-white-0-6);
 }
 .num{
-    text-transform: lowercase;
+    
     margin:-1rem;
+    
 }
+@media (min-width: 758px) {
+    .num{
+        text-align: start;
+        margin-left: .2rem;
+    }
+}
+
 span{
     color: var(--primary-soft-violet);
 }
+.k{
+    color: var(--neutral-st-white-0-75);
+    text-transform: lowercase;
+}
 
 /*propiedades Frontend Mentor / Frontend Mentor properties*/
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution { font-size: 11px; text-align: center; color: white; margin-top: 2rem; }
+.attribution a { color: hsl(180, 100%, 50%); }
