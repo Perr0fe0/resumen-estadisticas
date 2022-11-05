@@ -54,7 +54,6 @@ p{
 }
 img{
     width: 100%;
-    filter: contrast(150%);
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     
@@ -146,10 +145,10 @@ img{
     bottom: 0;
     left: 0;
     right: 0;
-    opacity: 0.5;
-    filter: contrast(180%);
+    opacity: 0.8;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
+    mix-blend-mode: multiply;
     
 }
 @media (min-width: 758px) {
